@@ -53,7 +53,7 @@ export default function Home(props) {
                   <source
                     srcSet={urlForImage(template.featuredImage).format("webp").width(600).url()} type="image/webp" />
                   <img
-                    src={urlForImage(template.featuredImage).width(600).url()}
+                    src={urlForImage(template.featuredImage).width(600).url()} alt={`Preview of ${template.title} by Little Sticks`}
                   />
                 </picture>
                 <h2>{template.title}</h2>
