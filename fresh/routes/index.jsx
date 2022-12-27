@@ -44,7 +44,7 @@ export default function Home(props) {
           </p>
         </div>
         <ul>
-          {props.data.map((template) => (
+          {props.data.map((template, index) => (
             <li class="home-template__item" key={template.id}>
               <a
                 href={`https://littlesticks.dev/templates/${template.seo.slug.current}`}
@@ -53,7 +53,7 @@ export default function Home(props) {
                   <source
                     srcSet={urlForImage(template.featuredImage).format("webp").width(600).url()} type="image/webp" />
                   <img
-                    src={urlForImage(template.featuredImage).width(600).url()} alt={`Preview of ${template.title} by Little Sticks`} width="376" height="212"
+                    src={urlForImage(template.featuredImage).width(600).url()} loading={index < 3 ? 'eager' : 'lazy'} alt={`Preview of ${template.title} by Little Sticks`} width="376" height="212"
                   />
                 </picture>
                 <h2>{template.title}</h2>
