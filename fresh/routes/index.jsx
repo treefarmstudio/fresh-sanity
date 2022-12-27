@@ -49,9 +49,13 @@ export default function Home(props) {
               <a
                 href={`https://littlesticks.dev/templates/${template.seo.slug.current}`}
               >
-                <img
-                  src={urlForImage(template.featuredImage).width(600).url()}
-                />
+                <picture>
+                  <source
+                    srcSet={urlForImage(template.featuredImage).format("webp").width(600).url()} type="image/webp" />
+                  <img
+                    src={urlForImage(template.featuredImage).width(600).url()}
+                  />
+                </picture>
                 <h2>{template.title}</h2>
               </a>
             </li>
