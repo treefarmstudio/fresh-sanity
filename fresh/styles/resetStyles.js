@@ -1,4 +1,4 @@
-import { css } from "../lib/cssHelper.ts"
+import { css } from "https://deno.land/x/treesap@0.0.2/src/css/mod.ts";
 
 export const resetStyles = css`
   /***
