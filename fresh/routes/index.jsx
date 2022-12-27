@@ -19,6 +19,7 @@ export default function Home(props) {
     <>
       <Head>
         <title>Fresh + Sanity Demo</title>
+        <meta name="description" content="Fresh + Sanity Demo" />
         <style>
           {baseStyles}
           {homeStyles}
@@ -27,14 +28,30 @@ export default function Home(props) {
       <div className="home-hero__container">
         <div className="home-hero__text">
           <h1>Fresh + Sanity</h1>
-          <p>This page is built with <a href="https://fresh.deno.dev">Fresh</a> 🍋 and the content is pulled from a <a href="https://sanity.io">Sanity</a> project</p>
-          <p><Button href="https://github.com/littlesticks/fresh-sanity">View Source <span class="btn__icon"><GithubIcon/></span></Button></p>
+          <p>
+            This page is built with <a href="https://fresh.deno.dev">Fresh</a>
+            {" "}
+            🍋 and the content is pulled from a{" "}
+            <a href="https://sanity.io">Sanity</a> project
+          </p>
+          <p>
+            <Button href="https://github.com/littlesticks/fresh-sanity">
+              View Source{" "}
+              <span class="btn__icon">
+                <GithubIcon />
+              </span>
+            </Button>
+          </p>
         </div>
         <ul>
           {props.data.map((template) => (
             <li class="home-template__item" key={template.id}>
-              <a href={`https://littlesticks.dev/templates/${template.seo.slug.current}`}>
-                <img src={urlForImage(template.featuredImage).width(600).url()}/>
+              <a
+                href={`https://littlesticks.dev/templates/${template.seo.slug.current}`}
+              >
+                <img
+                  src={urlForImage(template.featuredImage).width(600).url()}
+                />
                 <h2>{template.title}</h2>
               </a>
             </li>
