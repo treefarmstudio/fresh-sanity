@@ -1,6 +1,6 @@
 # Fresh + Sanity Demo
 
-This is a demo using [Fresh](https://fresh.deno.dev) and [Sanity](https://www.sanity.io/).
+This is a demo using Deno's [Fresh](https://fresh.deno.dev) and [Sanity](https://www.sanity.io/).
 
 It includes a skeleton Sanity Studio using v3 for you to create your own schemas.
 
